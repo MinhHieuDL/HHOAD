@@ -3,10 +3,14 @@
 
 using namespace std;
 
-Guitar::Guitar()
+Guitar::Guitar(string sSerialNum, string sBuilder, string sModel, string sType, double dbPrice)
 {
-    cout << "New guitar was made" << endl;
-}
+    this->m_sSerialNumber = sSerialNum;
+    this->m_sBuilder      = sBuilder;
+    this->m_sModel        = sModel;
+    this->m_sType         = sType;
+    this->m_dbPrice       = dbPrice;
+}   
 
 Guitar::~Guitar()
 {

@@ -12,7 +12,7 @@
             std::string m_sType;
             double m_dbPrice;
         public:
-            Guitar(/* args */);
+            Guitar(std::string sSerialNum, std::string sBuilder, std::string sModel, std::string sType, double dbPrice);
             ~Guitar();
 
             std::string getSerialNumber();

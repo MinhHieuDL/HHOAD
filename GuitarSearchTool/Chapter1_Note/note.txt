@@ -1,0 +1,4 @@
+Great software in 3 easy steps:
+1- Make sure your sw does what customer wants it to do
+2- Apply basic OO principles to add flexibility
+3- Strive for a maintainable, reuseable design

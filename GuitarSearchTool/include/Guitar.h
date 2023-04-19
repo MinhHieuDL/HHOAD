@@ -6,12 +6,12 @@
     class Guitar
     {
         public:
-            enum BUILDER : char
+            enum class BUILDER : char
             {
                 FENDER, GIBSON, MARTIN, TAYLOR, PRS, IBANEZ, ESP, YAMAHA
             };
 
-            enum TYPE : char
+            enum class TYPE : char
             {
                 CLASSIC, ELECTRIC
             };

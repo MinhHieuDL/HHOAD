@@ -13,9 +13,9 @@
             ~GuitarInventory();
 
             void addGuitar(std::string sSerial,\
-                           std::string sBuilder,\
+                           Guitar::BUILDER eBuilder,\
                            std::string sModel,\
-                           std::string sType,\
+                           Guitar::TYPE eType,\
                            double dbPrice);
             Guitar* getGuitar(std::string sSerial);
             Guitar* search(Guitar searchGuitar);

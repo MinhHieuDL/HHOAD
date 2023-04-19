@@ -5,20 +5,31 @@
 
     class Guitar
     {
+        public:
+            enum BUILDER : char
+            {
+                FENDER, GIBSON, MARTIN, TAYLOR, PRS, IBANEZ, ESP, YAMAHA
+            };
+
+            enum TYPE : char
+            {
+                CLASSIC, ELECTRIC
+            };
+
         private:
             std::string m_sSerialNumber;
-            std::string m_sBuilder;
             std::string m_sModel;
-            std::string m_sType;
+            BUILDER m_eBuilder;
+            TYPE m_eType;
             double m_dbPrice;
         public:
-            Guitar(std::string sSerialNum, std::string sBuilder, std::string sModel, std::string sType, double dbPrice);
+            Guitar(std::string sSerialNum, BUILDER eBuilder, std::string sModel, TYPE eType, double dbPrice);
             ~Guitar();
 
             std::string getSerialNumber();
-            std::string getBuilder();
             std::string getModel();
-            std::string getType();
+            BUILDER getBuilder();
+            TYPE getType();
             double getPrice();
     };
     

@@ -3,12 +3,12 @@
 
 using namespace std;
 
-Guitar::Guitar(string sSerialNum, string sBuilder, string sModel, string sType, double dbPrice)
+Guitar::Guitar(string sSerialNum, BUILDER eBuilder, string sModel, TYPE eType, double dbPrice)
 {
     this->m_sSerialNumber = sSerialNum;
-    this->m_sBuilder      = sBuilder;
+    this->m_eBuilder      = eBuilder;
     this->m_sModel        = sModel;
-    this->m_sType         = sType;
+    this->m_eType         = eType;
     this->m_dbPrice       = dbPrice;
 }   
 
@@ -22,9 +22,9 @@ string Guitar::getSerialNumber()
     return m_sSerialNumber;
 }
 
-string Guitar::getBuilder()
+Guitar::BUILDER Guitar::getBuilder()
 {
-    return m_sBuilder;
+    return m_eBuilder;
 }
 
 string Guitar::getModel()
@@ -32,9 +32,9 @@ string Guitar::getModel()
     return m_sModel;
 }
 
-string Guitar::getType()
+Guitar::TYPE Guitar::getType()
 {
-    return m_sType;
+    return m_eType;
 }
 
 double Guitar::getPrice()

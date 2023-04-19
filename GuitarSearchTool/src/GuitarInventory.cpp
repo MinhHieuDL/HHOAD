@@ -14,12 +14,12 @@ GuitarInventory::~GuitarInventory()
 }
 
 void GuitarInventory::addGuitar(std::string sSerial,\
-                                std::string sBuilder,\
+                                Guitar::BUILDER eBuilder,\
                                 std::string sModel,\
-                                std::string sType,\
+                                Guitar::TYPE eType,\
                                 double dbPrice)
 {
-    Guitar* pNewGuitar = new Guitar(sSerial, sBuilder, sModel, sType, dbPrice);
+    Guitar* pNewGuitar = new Guitar(sSerial, eBuilder, sModel, eType, dbPrice);
     m_lGuitar.push_back(pNewGuitar);
 }
 

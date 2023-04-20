@@ -14,12 +14,10 @@ GuitarInventory::~GuitarInventory()
 }
 
 void GuitarInventory::addGuitar(std::string sSerial,\
-                                Guitar::BUILDER eBuilder,\
-                                std::string sModel,\
-                                Guitar::TYPE eType,\
+                                GuitarSpecs stSpecs,\
                                 double dbPrice)
 {
-    Guitar* pNewGuitar = new Guitar(sSerial, eBuilder, sModel, eType, dbPrice);
+    Guitar* pNewGuitar = new Guitar(stSpecs, sSerial, dbPrice);
     m_lGuitar.push_back(pNewGuitar);
 }
 
@@ -35,14 +33,14 @@ Guitar* GuitarInventory::getGuitar(std::string sSerial)
     return nullptr;
 }
 
-Guitar* GuitarInventory::search(Guitar searchGuitar)
+Guitar* GuitarInventory::search(GuitarSpecs searchSpecs)
 {
-    std::cout << "Search for guitar model " << searchGuitar.getModel() << std::endl;
+    std::cout << "Search for guitar model " << searchSpecs.getModel() << std::endl;
 
     for (auto & guitar : m_lGuitar)
     {
-        std::cout << "Model already in store " << guitar->getModel() << std::endl;
-        if(guitar->getModel() == searchGuitar.getModel())
+        std::cout << "Model already in store " << guitar->getSpecs().getModel() << std::endl;
+        if(guitar->getSpecs().getModel() == searchSpecs.getModel())
         {
             return guitar;
         }

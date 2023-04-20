@@ -8,7 +8,7 @@ int main(void)
     GuitarInventory myStore;
     InstallInventory(myStore);
 
-    Guitar wantedGuitar("",Guitar::BUILDER::TAYLOR,"SungHaJung",Guitar::TYPE::CLASSIC,400);
+    GuitarSpecs wantedGuitar("SungHaJung",GuitarSpecs::BUILDER::TAYLOR,GuitarSpecs::TYPE::CLASSIC);
     myStore.search(wantedGuitar);
 
     std::cout << "Search Finished" << std::endl;
@@ -17,8 +17,12 @@ int main(void)
 
 void InstallInventory(GuitarInventory& inventory)
 {
-    inventory.addGuitar("0001", Guitar::BUILDER::YAMAHA, "F310", Guitar::TYPE::CLASSIC, 150);
-    inventory.addGuitar("0002", Guitar::BUILDER::FENDER, "Telecaster", Guitar::TYPE::ELECTRIC, 1500);
-    inventory.addGuitar("0003", Guitar::BUILDER::IBANEZ, "JSM100", Guitar::TYPE::ELECTRIC, 1650);
-    inventory.addGuitar("0004", Guitar::BUILDER::GIBSON, "L5", Guitar::TYPE::CLASSIC, 350);
+    GuitarSpecs specs1("F310",GuitarSpecs::BUILDER::YAMAHA,GuitarSpecs::TYPE::CLASSIC);
+    inventory.addGuitar("0001", specs1, 150);
+    GuitarSpecs specs2("Telecaster",GuitarSpecs::BUILDER::FENDER,GuitarSpecs::TYPE::ELECTRIC);
+    inventory.addGuitar("0002", specs2, 1500);
+    GuitarSpecs specs3("JSM100",GuitarSpecs::BUILDER::IBANEZ,GuitarSpecs::TYPE::ELECTRIC);
+    inventory.addGuitar("0003", specs3, 1650);
+    GuitarSpecs specs4("L5",GuitarSpecs::BUILDER::GIBSON,GuitarSpecs::TYPE::CLASSIC);
+    inventory.addGuitar("0004", specs4, 350);
 }

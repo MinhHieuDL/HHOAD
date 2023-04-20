@@ -2,3 +2,14 @@ Great software in 3 easy steps:
 1- Make sure your sw does what customer wants it to do
 2- Apply basic OO principles to add flexibility
 3- Strive for a maintainable, reuseable design
+
+Encapsulation: is when you hide the implementation of a class 
+in such a way that it is easy to use and easy to change. It
+makes the class act as a black box that provides a service to 
+its users, but does not open up the code so someone can change
+it or use it the wrong way. Encapsulation is a key technique 
+in being able to follow the Open-Closed principle
+Using Encapsulation to: 
+- Protect information in your code bing used incorrectly
+- Separate your data from your app's behavior. So you can 
+control how each part is used by the rest of your application 

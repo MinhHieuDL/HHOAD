@@ -39,9 +39,9 @@ Guitar* GuitarInventory::search(GuitarSpecs searchSpecs)
 
     for (auto & guitar : m_lGuitar)
     {
-        std::cout << "Model already in store " << guitar->getSpecs().getModel() << std::endl;
-        if(guitar->getSpecs().getModel() == searchSpecs.getModel())
+        if(guitar->getSpecs() == searchSpecs)
         {
+            std::cout << "Got one with serial numer: " << guitar->getSerialNumber() << std::endl;        
             return guitar;
         }
     }

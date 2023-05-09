@@ -8,7 +8,7 @@ int main(void)
     GuitarInventory myStore;
     InstallInventory(myStore);
 
-    GuitarSpecs wantedGuitar("SungHaJung",GuitarSpecs::BUILDER::TAYLOR,GuitarSpecs::TYPE::CLASSIC);
+    GuitarSpecs wantedGuitar("Telecaster",GuitarSpecs::BUILDER::FENDER,GuitarSpecs::TYPE::ELECTRIC);
     myStore.search(wantedGuitar);
 
     std::cout << "Search Finished" << std::endl;

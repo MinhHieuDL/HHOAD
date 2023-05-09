@@ -27,6 +27,8 @@
             std::string getModel();
             BUILDER getBuilder();
             TYPE getType();
+
+            bool operator==(const GuitarSpecs& specs);
     };
     class Guitar
     {

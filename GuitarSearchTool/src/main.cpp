@@ -10,7 +10,8 @@ int main(void)
 
     GuitarSpecs wantedGuitar("Telecaster",GuitarSpecs::BUILDER::FENDER,GuitarSpecs::TYPE::ELECTRIC);
     myStore.search(wantedGuitar);
-
+    GuitarSpecs wantedGuitar1("SunghaJung",GuitarSpecs::BUILDER::FENDER,GuitarSpecs::TYPE::ELECTRIC);
+    myStore.search(wantedGuitar1);
     std::cout << "Search Finished" << std::endl;
     return 0;
 }

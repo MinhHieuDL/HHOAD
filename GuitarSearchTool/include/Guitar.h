@@ -24,9 +24,9 @@
             GuitarSpecs(std::string sModel, BUILDER eBuilder, TYPE eType);
             ~GuitarSpecs();
 
-            std::string getModel();
-            BUILDER getBuilder();
-            TYPE getType();
+            std::string getModel() const {return m_sModel;}
+            BUILDER getBuilder() const {return m_eBuilder;}
+            TYPE getType() const {return m_eType;}
 
             bool operator==(const GuitarSpecs& specs);
     };
@@ -40,9 +40,9 @@
             Guitar(GuitarSpecs stSpecs, std::string sSerialNum, double dbPrice);
             ~Guitar();
 
-            std::string getSerialNumber();
-            double getPrice();
-            GuitarSpecs getSpecs();
+            std::string getSerialNumber() const {return m_sSerialNumber;}
+            double getPrice() const {return m_dbPrice;}
+            GuitarSpecs getSpecs() const {return m_stSpecs;}
     };
     
 #endif //HF_OOAD_GUITAR

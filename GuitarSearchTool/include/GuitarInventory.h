@@ -15,7 +15,7 @@
             void addGuitar(std::string sSerial,\
                            GuitarSpecs stSpecs,\
                            double dbPrice);
-            Guitar* getGuitar(std::string sSerial);
+            Guitar* getGuitar(std::string sSerial) const;
             Guitar* search(GuitarSpecs searchSpecs);
 
     };

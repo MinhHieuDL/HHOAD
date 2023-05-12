@@ -21,7 +21,7 @@ void GuitarInventory::addGuitar(std::string sSerial,\
     m_lGuitar.push_back(pNewGuitar);
 }
 
-Guitar* GuitarInventory::getGuitar(std::string sSerial)
+Guitar* GuitarInventory::getGuitar(std::string sSerial) const
 {
     for (auto  & guitar : m_lGuitar)
     {

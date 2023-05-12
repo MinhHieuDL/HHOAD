@@ -27,19 +27,6 @@ bool GuitarSpecs::operator==(const GuitarSpecs& specs)
             (m_eType == specs.m_eType));
 }
             
-std::string GuitarSpecs::getModel()
-{
-    return m_sModel;
-}
-GuitarSpecs::BUILDER GuitarSpecs::getBuilder()
-{
-    return m_eBuilder;
-}
-GuitarSpecs::TYPE GuitarSpecs::getType()
-{
-    return m_eType;
-}
-
 Guitar::Guitar(GuitarSpecs stSpecs, std::string sSerialNum, double dbPrice)
 {
     this->m_stSpecs       = stSpecs;
@@ -50,19 +37,4 @@ Guitar::Guitar(GuitarSpecs stSpecs, std::string sSerialNum, double dbPrice)
 Guitar::~Guitar()
 {
 
-}
-
-string Guitar::getSerialNumber()
-{
-    return m_sSerialNumber;
-}
-
-double Guitar::getPrice()
-{
-    return m_dbPrice;
-}
-
-GuitarSpecs Guitar::getSpecs()
-{
-    return m_stSpecs;
 }

@@ -1,8 +1,6 @@
 #include <iostream>
 #include "Guitar.h"
 
-using namespace std;
-
 GuitarSpecs::GuitarSpecs()
 {
     

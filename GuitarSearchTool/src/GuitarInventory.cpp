@@ -1,8 +1,6 @@
 #include <iostream>
 #include "GuitarInventory.h"
 
-using namespace std;
-
 GuitarInventory::GuitarInventory()
 {
 

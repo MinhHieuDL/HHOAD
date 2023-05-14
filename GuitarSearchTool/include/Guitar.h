@@ -28,7 +28,12 @@
             BUILDER getBuilder() const {return m_eBuilder;}
             TYPE getType() const {return m_eType;}
 
-            bool operator==(const GuitarSpecs& specs);
+            bool operator==(const GuitarSpecs& specs) const
+            {
+                return ((m_eBuilder==specs.m_eBuilder) && \
+                        (m_sModel==specs.m_sModel) && \
+                        (m_eType == specs.m_eType));
+            }
     };
     class Guitar
     {

@@ -17,13 +17,6 @@ GuitarSpecs::~GuitarSpecs()
 {
 
 }
-
-bool GuitarSpecs::operator==(const GuitarSpecs& specs)
-{
-    return ((m_eBuilder==specs.m_eBuilder) && \
-            (m_sModel==specs.m_sModel) && \
-            (m_eType == specs.m_eType));
-}
             
 Guitar::Guitar(GuitarSpecs stSpecs, std::string sSerialNum, double dbPrice)
 {

@@ -3,6 +3,13 @@
 
 extern void InstallInventory(GuitarInventory&);
 
+static const Guitar g_GuitarInventory[] = {
+    {{"F310",GuitarSpecs::BUILDER::YAMAHA,GuitarSpecs::TYPE::CLASSIC},"0001", 150},
+    {{"Telecaster",GuitarSpecs::BUILDER::FENDER,GuitarSpecs::TYPE::ELECTRIC}, "0002", 1500},
+    {{"JSM100",GuitarSpecs::BUILDER::IBANEZ,GuitarSpecs::TYPE::ELECTRIC}, "0003", 1650},
+    {{"L5",GuitarSpecs::BUILDER::GIBSON,GuitarSpecs::TYPE::CLASSIC}, "0004", 350}
+};
+
 int main(void)
 {
     GuitarInventory myStore;
@@ -18,12 +25,8 @@ int main(void)
 
 void InstallInventory(GuitarInventory& inventory)
 {
-    GuitarSpecs specs1("F310",GuitarSpecs::BUILDER::YAMAHA,GuitarSpecs::TYPE::CLASSIC);
-    inventory.addGuitar("0001", specs1, 150);
-    GuitarSpecs specs2("Telecaster",GuitarSpecs::BUILDER::FENDER,GuitarSpecs::TYPE::ELECTRIC);
-    inventory.addGuitar("0002", specs2, 1500);
-    GuitarSpecs specs3("JSM100",GuitarSpecs::BUILDER::IBANEZ,GuitarSpecs::TYPE::ELECTRIC);
-    inventory.addGuitar("0003", specs3, 1650);
-    GuitarSpecs specs4("L5",GuitarSpecs::BUILDER::GIBSON,GuitarSpecs::TYPE::CLASSIC);
-    inventory.addGuitar("0004", specs4, 350);
+    for(auto const& guitarSpecs : g_GuitarInventory)
+    {
+        inventory.addGuitar(guitarSpecs);
+    }
 }

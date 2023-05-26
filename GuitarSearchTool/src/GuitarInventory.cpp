@@ -19,6 +19,12 @@ void GuitarInventory::addGuitar(std::string sSerial,\
     m_lGuitar.push_back(pNewGuitar);
 }
 
+void GuitarInventory::addGuitar(Guitar guitar)
+{
+    Guitar* pNewGuitar = new Guitar(guitar);
+    m_lGuitar.push_back(pNewGuitar);
+}
+
 Guitar* GuitarInventory::getGuitar(std::string sSerial) const
 {
     for (auto  & guitar : m_lGuitar)
@@ -35,7 +41,7 @@ Guitar* GuitarInventory::search(GuitarSpecs searchSpecs)
 {
     std::cout << "Search for guitar model " << searchSpecs.getModel() << std::endl;
 
-    for (auto & guitar : m_lGuitar)
+    for (auto const& guitar : m_lGuitar)
     {
         if(guitar->getSpecs() == searchSpecs)
         {
